@@ -18,10 +18,10 @@ else:
 
 pushover_url = "https://api.pushover.net/1/messages.json"
 pushover_parameters = {
-    "token": "azh7gau64gh3zo2f18efhfieizdbtq",
-    "user": "urgwnhpdt6s5zp22wguvt97bj79bku",
-    "title": "Ethereum Price Alert",
-    "message": "Current Ethereum price: " + str(round(eth_price,2))
+    "token": "azh7gau64gh3zo2f18efhfieizdbtq", #my API token
+    "user": "urgwnhpdt6s5zp22wguvt97bj79bku", #my user key
+    "title": "Ethereum Price Alert", #title of notification
+    "message": "Current Ethereum price: " + str(round(eth_price,2)) #text content in the notification
 }
 
-requests.post(pushover_url, pushover_parameters)
+requests.post(pushover_url, pushover_parameters) #Sends an HTTP POST request to Pushover, which will then notify the user of ETH's current price
